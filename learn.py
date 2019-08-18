@@ -54,9 +54,9 @@ X = np.asmatrix(X)
 y = np.asmatrix(y).getT()
 num_labels = 26
 y_tmp = np.asmatrix(np.zeros([np.size(X,0),num_labels]))
-theta1 = np.asmatrix(np.random.rand(5000,np.size(X,1)+1))
-theta2 = np.asmatrix(np.random.rand(3000,5001))
-theta3 = np.asmatrix(np.random.rand(26,3001))
+theta1 = np.asmatrix(np.random.randn(500,np.size(X,1)+1))*np.sqrt(2/(np.size(X,1)+1))
+theta2 = np.asmatrix(np.random.randn(300,501))*np.sqrt(2.0/501.0)
+theta3 = np.asmatrix(np.random.randn(26,301))*np.sqrt(2.0/301.0)
 for i in range(np.size(y,0)):
     y_tmp.itemset((i,int(y.item((i,0)))-1),1)
 y = y_tmp
